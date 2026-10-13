@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Sitemap
+Sitemap: https://zimloanlink.com/sitemap.xml
