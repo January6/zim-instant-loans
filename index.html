@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google AdSense Account Verification -->
+  <meta name="google-adsense-account" content="ca-pub-7774524390977102">
+
+  <!-- Google AdSense Advertisement Script -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7774524390977102"
+    crossorigin="anonymous"></script>
+
+  <meta name="description" content="Zim Instant Loans helps Zimbabweans discover online loan providers, bank websites and digital lending services.">
+  <title>Zim Instant Loans | Find Loans in Zimbabwe</title>
+
+  <meta property="og:title" content="Zim Instant Loans | Find Loans in Zimbabwe">
+  <meta property="og:description" content="Discover online loan providers, bank websites and digital lending services in Zimbabwe.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230757b8%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-size=%2256%22 text-anchor=%22middle%22 fill=%22%23ffbd24%22 font-family=%22Arial%22 font-weight=%22bold%22%3EZ%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --primary: #0757b8;
+      --primary-dark: #073b79;
+      --accent: #ffbd24;
+      --background: #f4f7fb;
+      --text: #1e293b;
+      --muted: #556274;
+      --white: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--white);
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 12px #0000000b;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .logo span {
+      color: #b86e00;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 65px 6% 55px;
+      text-align: center;
+      color: var(--white);
+      background: linear-gradient(135deg, #073b79, #0878d1);
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 25px;
+      color: #eaf3ff;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #ffffff20;
+      border: 1px solid #ffffff55;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #172033;
+      font-weight: 800;
+    }
+
+    .container {
+      width: 88%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 42px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      font-size: 29px;
+      margin-bottom: 7px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .controls input,
+    .controls select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--white);
+      font-size: 15px;
+      outline-color: var(--primary);
+    }
+
+    .ad-box {
+      min-height: 100px;
+      padding: 18px;
+      margin: 25px 0;
+      background: #edf2f7;
+      border: 1px dashed #aab8ca;
+      border-radius: 10px;
+      text-align: center;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .ad-box[hidden] {
+      display: none;
+    }
+
+    .ad-box small {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .loan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .loan-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 23px;
+      box-shadow: 0 5px 20px #1e293b08;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .loan-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px #1e293b12;
+    }
+
+    .provider-type {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: #eaf2ff;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .referral-note {
+      align-self: flex-start;
+      font-size: 11px;
+      color: var(--muted);
+      margin: -8px 0 10px;
+    }
+
+    .loan-card h3 {
+      font-size: 21px;
+      margin-bottom: 9px;
+    }
+
+    .loan-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .loan-card ul {
+      list-style: none;
+      margin: 0 0 20px;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .loan-card li {
+      margin: 7px 0;
+    }
+
+    .loan-card li::before {
+      content: "✓ ";
+      color: #16834a;
+      font-weight: 800;
+    }
+
+    .loan-button {
+      display: block;
+      text-align: center;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px;
+      border-radius: 7px;
+      font-weight: 700;
+      margin-top: auto;
+    }
+
+    .loan-button:hover {
+      background: var(--primary-dark);
+    }
+
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      grid-column: 1 / -1;
+    }
+
+    .info-section {
+      background: var(--white);
+      padding: 38px 0;
+      margin-top: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .info-item {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .info-item h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .info-item p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .disclaimer {
+      background: #fff8e5;
+      border-left: 4px solid #e9a400;
+      padding: 17px;
+      margin: 25px 0;
+      font-size: 13px;
+      color: #594617;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #10243d;
+      color: #d8e2f0;
+      padding: 30px 6%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 7px 0;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .loan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 15px 5%;
+      }
+
+      nav {
+        gap: 13px;
+      }
+
+      .hero {
+        padding: 45px 5%;
+      }
+
+      .container {
+        width: 92%;
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .loan-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#home" class="logo">ZIM INSTANT <span>LOANS</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#loans">Loan Providers</a>
+      <a href="#safety">Loan Safety</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <span class="hero-tag">YOUR LOAN INFORMATION DIRECTORY</span>
+
+      <h1>Find Loan Providers in Zimbabwe</h1>
+
+      <p>
+        Explore digital lending services and financial institutions in one place.
+        Compare the available information and visit the provider's website
+        to confirm eligibility, fees and application requirements.
+      </p>
+
+      <a href="#loans" class="hero-button">
+        Explore Loan Providers <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section class="section" id="loans">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Explore Loan Providers</h2>
+          <p>Search the directory and select a provider to visit its website.</p>
+        </div>
+
+        <div class="controls">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search providers..."
+            aria-label="Search loan providers"
+          >
+
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="personal">Personal Loans</option>
+            <option value="salary">Salary Loans</option>
+            <option value="business">Business Finance</option>
+            <option value="digital">Digital Lending</option>
+          </select>
+        </div>
+
+        <!-- Google AdSense ad placement:
+             This placeholder is hidden until you configure an ad unit. -->
+        <div class="ad-box" hidden>
+          <small>Advertisement</small>
+          <p>Your advertisement can appear here.</p>
+        </div>
+
+        <div class="loan-grid" id="loanGrid">
+
+          <!-- ZIMLOAN -->
+          <article
+            class="loan-card"
+            data-category="personal digital"
+            data-name="zimloan online digital personal loans"
+          >
+            <span class="provider-type">Digital Lending</span>
+            <span class="referral-note">Referral link</span>
+            <h3>ZimLoan</h3>
+            <p>
+              Visit ZimLoan through the referral link to check its current
+              lending services and application requirements.
+            </p>
+            <ul>
+              <li>Online provider link</li>
+              <li>Check eligibility directly</li>
+              <li>Review fees and repayment terms</li>
+            </ul>
+            <a
+              class="loan-button"
+              href="https://www.zimloan.com/i/xjXX7GX0"
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+            >Visit ZimLoan <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- ECOCASH KASHAGI -->
+          <article
+            class="loan-card"
+            data-category="personal digital"
+            data-name="ecocash kashagi digital mobile loans"
+          >
+            <span class="provider-type">Digital Lending</span>
+            <span class="referral-note">Referral link</span>
+            <h3>EcoCash Kashagi</h3>
+            <p>
+              Visit the EcoCash Kashagi referral page to check the service,
+              availability and requirements for your account.
+            </p>
+            <ul>
+              <li>EcoCash referral link</li>
+              <li>Check availability in the service</li>
+              <li>Confirm charges before borrowing</li>
+            </ul>
+            <a
+              class="loan-button"
+              href="https://superapp.ecocash.co.zw/html/referral.html?referrer=QIQT8M8T"
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+            >Visit EcoCash Kashagi <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- ECOBANK -->
+          <article
+            class="loan-card"
+            data-category="personal business"
+            data-name="ecobank zimbabwe bank personal business loans"
+          >
+            <span class="provider-type">Bank Loans</span>
+            <h3>Ecobank Zimbabwe</h3>
+            <p>
+              Explore Ecobank's official loans and personal banking information.
+              Contact the bank to confirm which products are available to you.
+            </p>
+            <ul>
+              <li>Official bank loan information</li>
+              <li>Check product requirements</li>
+              <li>Confirm rates and repayment terms</li>
+            </ul>
+            <a
+              class="loan-button"
+              href="https://www.ecobank.com/zw/personal-banking/products-services/loans"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Visit Ecobank <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- BANCEASY -->
+          <article
+            class="loan-card"
+            data-category="personal business digital"
+            data-name="banceasy zimbabwe finance loans"
+          >
+            <span class="provider-type">Business Finance</span>
+            <h3>BancEASY</h3>
+            <p>
+              Visit the provider's website to learn about its current services,
+              eligibility criteria and application process.
+            </p>
+            <ul>
+              <li>Provider website</li>
+              <li>Check available finance options</li>
+              <li>Review all terms before applying</li>
+            </ul>
+            <a
+              class="loan-button"
+              href="https://banceasy.co.zw/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Visit BancEASY <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- NMB BANK -->
+          <article
+            class="loan-card"
+            data-category="personal salary business"
+            data-name="nmb bank zimbabwe personal salary business loans"
+          >
+            <span class="provider-type">Bank Loans</span>
+            <h3>NMB Bank Zimbabwe</h3>
+            <p>
+              Visit NMB Bank's official website to find its current banking
+              and financing products and learn how to apply.
+            </p>
+            <ul>
+              <li>Official bank website</li>
+              <li>Enquire about eligible loan products</li>
+              <li>Confirm application requirements</li>
+            </ul>
+            <a
+              class="loan-button"
+              href="https://www.nmbz.co.zw/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Visit NMB Bank <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- STANBIC BANK -->
+          <article
+            class="loan-card"
+            data-category="personal salary business"
+            data-name="stanbic bank zimbabwe personal salary business loans"
+          >
+            <span class="provider-type">Bank Loans</span>
+            <h3>Stanbic Bank Zimbabwe</h3>
+            <p>
+              Explore Stanbic Bank's official website for current banking
+              products and information about available financing.
+            </p>
+            <ul>
+              <li>Official bank website</li>
+              <li>Check qualifying criteria</li>
+              <li>Confirm interest and other charges</li>
+            </ul>
+            <a
+              class="loan-button"
+              href="https://www.stanbicbank.co.zw/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Visit Stanbic Bank <span aria-hidden="true">→</span></a>
+          </article>
+
+          <div class="no-results" id="noResults">
+            No matching providers found. Try another search or category.
+          </div>
+
+        </div>
+
+        <!-- Additional ad placement, currently hidden -->
+        <div class="ad-box" hidden>
+          <small>Advertisement</small>
+          <p>Space available for another advertisement.</p>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Important:</strong> Zim Instant Loans is a loan-information
+          directory, not a lender. We do not guarantee loan approval, interest
+          rates or provider availability. The ZimLoan and EcoCash Kashagi links
+          are referral links, which means we may receive a reward if you sign
+          up through them. This does not change what you pay.
+          Always verify the provider's identity, eligibility rules, total
+          repayment amount, fees and terms before sharing personal information
+          or accepting a loan.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="info-section" id="safety">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Borrow Safely</h2>
+          <p>Protect your money and personal information.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>01. Verify the Provider</h3>
+            <p>
+              Use official websites and verify the company's identity and
+              regulatory status where applicable.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>02. Understand the Cost</h3>
+            <p>
+              Check the interest rate, fees, repayment dates, penalties
+              and the total amount you will repay.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>03. Protect Your Details</h3>
+            <p>
+              Never share your PIN, password or one-time security code.
+              Be cautious of requests for upfront loan-release fees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Zim Instant Loans</h2>
+          <p>
+            Our aim is to help visitors discover financial service websites
+            and find the official information they need before applying.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Zim Instant Loans</strong></p>
+    <p>Loan information directory for Zimbabwe.</p>
+    <p>
+      We are not a bank or a lending institution and do not approve loans.
+    </p>
+    <p>
+      Always verify offers directly with the relevant provider.
+    </p>
+    <p>&copy; <span id="year"></span> Zim Instant Loans. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const loanCards = document.querySelectorAll(".loan-card");
+    const noResults = document.getElementById("noResults");
+
+    function filterLoans() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const selectedCategory = categoryFilter.value;
+      let visibleCount = 0;
+
+      loanCards.forEach((card) => {
+        const searchableText =
+          (card.dataset.name + " " +
+           card.querySelector("h3").textContent).toLowerCase();
+
+        const categories = card.dataset.category.split(" ");
+
+        const matchesSearch = searchableText.includes(searchTerm);
+
+        const matchesCategory =
+          selectedCategory === "all" ||
+          categories.includes(selectedCategory);
+
+        const isVisible = matchesSearch && matchesCategory;
+
+        card.style.display = isVisible ? "flex" : "none";
+
+        if (isVisible) {
+          visibleCount++;
+        }
+      });
+
+      noResults.style.display =
+        visibleCount === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", filterLoans);
+    categoryFilter.addEventListener("change", filterLoans);
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
